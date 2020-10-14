@@ -19,7 +19,7 @@ void insert_grup(Student* std, int hms);
 void menu(void);
 void choice_num(Student* man, int hms);
 void view_all(Student* man, int hms);
-
+int comp_i(void* a, void* b);
 
 
 
@@ -52,7 +52,7 @@ void menu(void) {// 메뉴
 	puts("1. 개인 성적입력");
 	puts("2. 개인 성적수정");
 	puts("3. 전체성적 출력");
-	puts("0.종료");
+	puts("0. 종료");
 	puts("==============================\n\n");
 }
 
@@ -63,13 +63,13 @@ void choice_num(Student* man, int hms){//메뉴 클릭하면 행동발생
 
 	printf("번호를 입력해주세요");
 	
-	scanf("%d", &hms);
+	scanf("%d", &click);
 
 	switch (click) {
 	case 1:
         for(int i = 0; i < hms; i++){
             printf("학생의 이름을 입력해주세요");
-            fgets(man[i].name, sizeof((char)*11), stdin);
+            gets(man[i].name);
         
 
             for (int j = 0; j < 3; j++) {
@@ -90,7 +90,7 @@ void choice_num(Student* man, int hms){//메뉴 클릭하면 행동발생
 }
 
 void view_all(Student *man, int hms){//3. 전체성적 출력
-    char *mm[]={"이름", "국어성적", "영어", "수학"}
+	char* mm[] = { "이름", "국어성적", "영어", "수학" };
     for(int i = 0; i < 4; i++){
         printf("$-4s", mm[i]);
     }
@@ -103,11 +103,11 @@ void view_all(Student *man, int hms){//3. 전체성적 출력
 	}
 }
 
-int all_sung(Student *man){
-    qsort(man->all_sung,sizeof(man->all_sung), sizeof(int), comp_i);
-
-}
-
-int comp_i(void *a, void *b){
-    (*(int*)a, *(int*)b)
-}
+//int all_sung(Student *man){
+//    qsort(man->all_sung,sizeof(man->all_sung), sizeof(int), comp_i);
+//
+//}
+//
+//int comp_i(void *a, void *b){
+//	(*(int*)a, *(int*)b);
+//}
