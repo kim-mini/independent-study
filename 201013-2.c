@@ -32,6 +32,9 @@ main()
 	scanf("%d", &hms);
 
 	std = (Student*)calloc(hms ,sizeof(Student));
+	//for (int i = 0; i < hms; i++) {
+	//	memset(std, 0, sizeof(Student)*hms);
+	//}
 
 	choice_num(&std, hms);
 }
