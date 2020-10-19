@@ -16,7 +16,7 @@ typedef struct student {
 
 
 void menu(void);
-void choice_num(Student* man, int hms);
+void choice_num(Student** man, int hms);
 void view_all(Student* man, int hms);
 void all_sung(Student* man, int hms);
 int comp_i(void* a, void* b);
@@ -26,14 +26,14 @@ int comp_i(void* a, void* b);
 main()
 {
 	int hms = 0;
-	Student* std = { 0, };
+	Student* std;
 
 	printf("학생 수를 입력해 주세요 ");
 	scanf("%d", &hms);
 
-	std = (Student*)malloc(sizeof(Student) * hms);
+	std = (Student*)calloc(hms ,sizeof(Student));
 
-	choice_num(std, hms);
+	choice_num(&std, hms);
 }
 
 
@@ -48,11 +48,11 @@ void menu(void) {// 메뉴
 	puts("==============================\n");
 }
 
-void choice_num(Student* man, int hms) {//메뉴 클릭하면 행동발생
+void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 
 	int click = 0;
 	int num = 0;
-	
+
 
 	while (1)
 	{
@@ -66,31 +66,49 @@ void choice_num(Student* man, int hms) {//메뉴 클릭하면 행동발생
 		case 1:
 			for (int i = 0; i < hms; i++) {
 				printf("학생의 이름을 입력해주세요 ");
-				scanf("%s", &man[i].name);
+				scanf("%s", man[i]->name);
 
 				printf("국어, 영어, 수학성적을 입력해주세요 ");
 				for (int j = 0; j < 3; j++) {
-					scanf("%d", &man[i].sungjuck[j]);					
-				}			
-			}		
+					scanf("%d", &man[i]->sungjuck[j]);
+				}
+				for (int i = 0; i < hms; i++) {
+					for (int j = 0; j < 3; j++) {
+						man[i]->all_sung += man[i]->sungjuck[j];
+					}
+				}
+			}
 			break;
 
 
 		case 2:
-			printf("몇번째 학생의 정보를 수정하시겠습니까 ");
-
+			
+			for (int i = 0; i < hms; i++) {
+				printf("%d번 %s\n", i+1, man[i]->name);
+			}
+			printf("몇번 학생의 정보를 수정하시겠습니까 ");
 			scanf("%d", &num);
-			printf("%d번째학생의 정보를 수정합니다\n이름을 입력해 주세요 ", num);
-			scanf("%s", &man[num-1].name);
-			printf("%d번째 학생의 국어, 영어, 수학성적을 입력해주세요 ", num);
+
+			free(man[num - 1]);
+			man[num - 1] = (Student*)calloc(1, sizeof(Student));
+
+			printf("%d번 학생의 정보를 수정합니다\n이름을 입력해 주세요 ", num);
+			scanf("%s", man[num - 1]->name);
+			printf("%d번 학생의 국어, 영어, 수학성적을 입력해주세요 ", num);
 			for (int i = 0; i < 3; i++) {
-				scanf("%d", &man[num-1].sungjuck[i]);
+				scanf("%d", &man[num - 1]->sungjuck[i]);
+			}
+			man[num - 1]->all_sung = 0;
+
+			for (int j = 0; j < 3; j++) {
+				
+				man[num-1]->all_sung += man[num-1]->sungjuck[j];
 			}
 			printf("입력이 완료되었습니다\n\n");
 			break;
 
 		case 3:
-			view_all(man, hms);
+			view_all(*man, hms);
 			break;
 
 		case 0:
@@ -98,22 +116,17 @@ void choice_num(Student* man, int hms) {//메뉴 클릭하면 행동발생
 			break;
 		}
 
-		if (num == 0) {
+		if (click == 0) {
 			break;
 		}
 
-		for (int i = 0; i < hms; i++) {
-
-			for (int j = 0; j < 3; j++) {
-				man[i].all_sung = man[i].all_sung + man[i].sungjuck[j];
-			}
-		}
+		
 	}
 }
 
 void view_all(Student* man, int hms) {//3. 전체성적 출력
-	char* mm[] = { "이름", "국어성적", "영어성적", "수학성적", "총점" };
-	for (int i = 0; i < 5; i++) {
+	char* mm[] = { "이름", "국어성적", "영어성적", "수학성적", "총점", "등수" };
+	for (int i = 0; i + 1 != NULL; i++) {
 		printf("%-10s", mm[i]);
 	}
 	printf("\n");
@@ -124,7 +137,7 @@ void view_all(Student* man, int hms) {//3. 전체성적 출력
 			printf("%-10d", man[i].sungjuck[j]);
 
 		}
-		//printf("%-10d\n\n", man[i].all_sung);//총점이 왜 깨질까요...?
+		printf("%-10d\n\n", man[i].all_sung);
 	}
 }
 
