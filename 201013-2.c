@@ -11,14 +11,15 @@ typedef struct student {
 	char name[11];
 	int sungjuck[3];
 	int all_sung;
+	int rank;
 }Student;
 
 
 
 void menu(void);
 void choice_num(Student** man, int hms);
-void view_all(Student* man, int hms);
-void all_sung(Student* man, int hms);
+void view_all(Student** man, int hms);
+void all_sung(Student** man, int hms);
 int comp_i(void* a, void* b);
 
 
@@ -31,7 +32,7 @@ main()
 	printf("학생 수를 입력해 주세요 ");
 	scanf("%d", &hms);
 
-	std = (Student*)calloc(hms ,sizeof(Student));
+	std = (Student*)calloc(hms, sizeof(Student));
 	//for (int i = 0; i < hms; i++) {
 	//	memset(std, 0, sizeof(Student)*hms);
 	//}
@@ -85,11 +86,11 @@ void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 
 
 		case 2:
-			
+
 			for (int i = 0; i < hms; i++) {
-				printf("%d번 %s\n", i+1, man[i]->name);
+				printf("%d번 %s\n", i + 1, man[i]->name);
 			}
-			printf("몇번 학생의 정보를 수정하시겠습니까 ");
+			printf("\n몇번 학생의 정보를 수정하시겠습니까 ");
 			scanf("%d", &num);
 
 			free(man[num - 1]);
@@ -104,14 +105,14 @@ void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 			man[num - 1]->all_sung = 0;
 
 			for (int j = 0; j < 3; j++) {
-				
-				man[num-1]->all_sung += man[num-1]->sungjuck[j];
+
+				man[num - 1]->all_sung += man[num - 1]->sungjuck[j];
 			}
 			printf("입력이 완료되었습니다\n\n");
 			break;
 
 		case 3:
-			view_all(*man, hms);
+			view_all(man, hms);
 			break;
 
 		case 0:
@@ -123,34 +124,35 @@ void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 			break;
 		}
 
-		
+
 	}
 }
 
-void view_all(Student* man, int hms) {//3. 전체성적 출력
+void view_all(Student** man, int hms) {//3. 전체성적 출력
 	char* mm[] = { "이름", "국어성적", "영어성적", "수학성적", "총점", "등수" };
-	for (int i = 0; i + 1 != NULL; i++) {
+	for (int i = 0; i < 6;  i++) {
 		printf("%-10s", mm[i]);
 	}
 	printf("\n");
 
 	for (int i = 0; i < hms; i++) {
-		printf("%-10s", man[i].name);
+		printf("%-10s", man[i]->name);
 		for (int j = 0; j < 3; j++) {
-			printf("%-10d", man[i].sungjuck[j]);
+			printf("%-10d", man[i]->sungjuck[j]);
 
 		}
-		printf("%-10d\n\n", man[i].all_sung);
+		printf("%-10d", man[i]->all_sung);
+		//printf("%-10d\n\n", man[i]->rank);
 	}
 }
 
-//void all_sung(Student* man, int hms) {
-//	for (int i = 0; i < hms; i++) {
-//		qsort(man[i].all_sung, sizeof(man->all_sung), sizeof(int), comp_i);
-//	}
-//}
+void all_sung(Student** man, int hms) {
+	for (int i = 0; i < hms; i++) {
+		qsort(man[i]->sungjuck[3], sizeof((*man)->sungjuck[0]), sizeof(int), comp_i);
+	}
+}
 
-//int comp_i(const void* a,const void* b) {
-//	(*(int*)a, *(int*)b);
-//	return;
-//}
+int comp_i(const void* a,const void* b) {
+	return (*(int*)a, *(int*)b);
+	
+}
