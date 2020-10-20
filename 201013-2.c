@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #pragma warning(disable:4996)
 #include <stdlib.h>
@@ -24,7 +25,7 @@ int comp_i(void* a, void* b);
 
 
 
-main()
+int main()
 {
 	int hms = 0;
 	Student* std;
@@ -38,6 +39,7 @@ main()
 	//}
 
 	choice_num(&std, hms);
+	return 0;
 }
 
 
@@ -146,13 +148,31 @@ void view_all(Student** man, int hms) {//3. 전체성적 출력
 	}
 }
 
+
+
+
 void all_sung(Student** man, int hms) {
-	for (int i = 0; i < hms; i++) {
-		qsort(man[i]->sungjuck[3], sizeof((*man)->sungjuck[0]), sizeof(int), comp_i);
+
+
+	for(int i = 0; i < hms;){
+		man[i]->rank = 1;
+		//if(man[i]->sungjuck[3])
+		for(int j =0; j<hms;){
+		    if(i<j){
+			if(man[i]->sungjuck[3]> man[j]->sungjuck[3]){
+				j++;
+			}
+			else if(man[i]->sungjuck[3] <= man[j]->sungjuck[3]){
+				rank ++;
+				j++;
+			}
+			else
+				j++;
+		    }
+		}
+		man[i]->rank = rank;
+		i++;
 	}
 }
 
-int comp_i(const void* a,const void* b) {
-	return (*(int*)a, *(int*)b);
-	
-}
+
