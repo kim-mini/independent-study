@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #pragma warning(disable:4996)
 #include <stdlib.h>
@@ -16,12 +15,13 @@ typedef struct student {
 }Student;
 
 
-
+void modify_info(Student* man, int hms);
+void input_info(Student* man, int hms);
 void menu(void);
-void choice_num(Student** man, int hms);
-void view_all(Student** man, int hms);
-void all_sung(Student** man, int hms);
-int comp_i(void* a, void* b);
+void choice_num(Student* man, int hms);
+void view_all(Student* man, int hms);
+void all_sung(Student* man, int hms);
+
 
 
 
@@ -33,12 +33,12 @@ int main()
 	printf("학생 수를 입력해 주세요 ");
 	scanf("%d", &hms);
 
-	std = (Student*)calloc(hms, sizeof(Student));
-	//for (int i = 0; i < hms; i++) {
-	//	memset(std, 0, sizeof(Student)*hms);
-	//}
+	//std = (Student*)calloc(hms, sizeof(Student));
+	std = (Student*)malloc(sizeof(Student)*hms);//동적메모리 할당
+	memset(std, 0, sizeof(Student)*hms);//동적메모리 초기화
+	
 
-	choice_num(&std, hms);
+	choice_num(std, hms);
 	return 0;
 }
 
@@ -54,10 +54,10 @@ void menu(void) {// 메뉴
 	puts("==============================\n");
 }
 
-void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
+void choice_num(Student* man, int hms) {//메뉴 클릭하면 행동발생
 
 	int click = 0;
-	int num = 0;
+	
 
 
 	while (1)
@@ -70,47 +70,13 @@ void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 
 		switch (click) {
 		case 1:
-			for (int i = 0; i < hms; i++) {
-				printf("학생의 이름을 입력해주세요 ");
-				scanf("%s", man[i]->name);
-
-				printf("국어, 영어, 수학성적을 입력해주세요 ");
-				for (int j = 0; j < 3; j++) {
-					scanf("%d", &man[i]->sungjuck[j]);
-				}
-				for (int i = 0; i < hms; i++) {
-					for (int j = 0; j < 3; j++) {
-						man[i]->all_sung += man[i]->sungjuck[j];
-					}
-				}
-			}
+			input_info(man, hms);
 			break;
 
 
 		case 2:
 
-			for (int i = 0; i < hms; i++) {
-				printf("%d번 %s\n", i + 1, man[i]->name);
-			}
-			printf("\n몇번 학생의 정보를 수정하시겠습니까 ");
-			scanf("%d", &num);
-
-			free(man[num - 1]);
-			man[num - 1] = (Student*)calloc(1, sizeof(Student));
-
-			printf("%d번 학생의 정보를 수정합니다\n이름을 입력해 주세요 ", num);
-			scanf("%s", man[num - 1]->name);
-			printf("%d번 학생의 국어, 영어, 수학성적을 입력해주세요 ", num);
-			for (int i = 0; i < 3; i++) {
-				scanf("%d", &man[num - 1]->sungjuck[i]);
-			}
-			man[num - 1]->all_sung = 0;
-
-			for (int j = 0; j < 3; j++) {
-
-				man[num - 1]->all_sung += man[num - 1]->sungjuck[j];
-			}
-			printf("입력이 완료되었습니다\n\n");
+			modify_info(man, hms);
 			break;
 
 		case 3:
@@ -130,49 +96,99 @@ void choice_num(Student** man, int hms) {//메뉴 클릭하면 행동발생
 	}
 }
 
-void view_all(Student** man, int hms) {//3. 전체성적 출력
+void modify_info(Student* man, int hms) {
+	int num = 0;
+
+	for (int i = 0; i < hms; i++) {
+		printf("%d번 %s\n", i + 1, man[i].name);
+	}
+	printf("\n몇번 학생의 정보를 수정하시겠습니까 ");
+	scanf("%d", &num);
+
+
+	//man[num - 1] = (Student*)calloc(1, sizeof(Student));
+	memset(&man[num-1], 1,0,sizeof(Student));//첫번째 인자는 주소값을 넣어야한다.
+
+	printf("%d번 학생의 정보를 수정합니다\n이름을 입력해 주세요 ", num);
+	scanf("%s", man[num - 1].name);
+	printf("%d번 학생의 국어, 영어, 수학성적을 입력해주세요 ", num);
+	for (int i = 0; i < 3; i++) {
+		scanf("%d", &man[num - 1].sungjuck[i]);
+	}
+	man[num - 1].all_sung = 0;
+
+	for (int j = 0; j < 3; j++) {
+
+		man[num - 1].all_sung += man[num - 1].sungjuck[j];
+	}
+	printf("입력이 완료되었습니다\n\n");
+
+}
+
+void input_info(Student* man, int hms) {
+	for (int i = 0; i < hms; i++) {
+		printf("학생의 이름을 입력해주세요 ");
+		scanf("%s", man[i].name);
+
+		printf("국어, 영어, 수학성적을 입력해주세요 ");
+		for (int j = 0; j < 3; j++) {
+			scanf("%d", &man[i].sungjuck[j]);//2명 이상일경우 넘어가지않는다
+		}
+		
+		for (int j = 0; j < 3; j++) {
+			man[i].all_sung += man[i].sungjuck[j];
+		}
+		
+	}
+	all_sung(man, hms);
+}
+
+void view_all(Student* man, int hms) {//3. 전체성적 출력
 	char* mm[] = { "이름", "국어성적", "영어성적", "수학성적", "총점", "등수" };
-	for (int i = 0; i < 6;  i++) {
+	for (int i = 0; i < 6; i++) {
 		printf("%-10s", mm[i]);
 	}
 	printf("\n");
 
 	for (int i = 0; i < hms; i++) {
-		printf("%-10s", man[i]->name);
+		printf("%-10s", man[i].name);
 		for (int j = 0; j < 3; j++) {
-			printf("%-10d", man[i]->sungjuck[j]);
+			printf("%-10d", man[i].sungjuck[j]);
 
 		}
-		printf("%-10d", man[i]->all_sung);
-		//printf("%-10d\n\n", man[i]->rank);
+		printf("%-10d", man[i].all_sung);
+		printf("%-10d\n\n", man[i].rank);
 	}
 }
 
+void all_sung(Student* man, int hms) {
+	int rank = 1;
 
-
-
-void all_sung(Student** man, int hms) {
-
-
-	for(int i = 0; i < hms;){
-		man[i]->rank = 1;
+	for (int i = 0; i < hms;) {
+		
+		
 		//if(man[i]->sungjuck[3])
-		for(int j =0; j<hms;){
-		    if(i<j){
-			if(man[i]->sungjuck[3]> man[j]->sungjuck[3]){
+		for (int j = 0; j < hms;) {
+			
+
+			if (man[i].sungjuck[3] > man[j].sungjuck[3]) {
 				j++;
 			}
-			else if(man[i]->sungjuck[3] <= man[j]->sungjuck[3]){
-				rank ++;
+			else if (man[i].sungjuck[3] < man[j].sungjuck[3]) {
+				rank++;
 				j++;
 			}
-			else
+			else if (man[i].sungjuck[3] == man[j].sungjuck[3]) {
 				j++;
-		    }
+				if (i > j) {
+					rank++;
+				}
+			}
 		}
-		man[i]->rank = rank;
+
+		man[i].rank = rank;
+		rank = 1;
 		i++;
+
 	}
 }
-
-
