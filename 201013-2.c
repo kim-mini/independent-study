@@ -39,8 +39,10 @@ int main()
 	
 
 	choice_num(std, hms);
+	free(std);
+
 	return 0;
-}
+}//동적할당하면 free를 해놓자
 
 
 
@@ -122,7 +124,7 @@ void modify_info(Student* man, int hms) {
 		man[num - 1].all_sung += man[num - 1].sungjuck[j];
 	}
 	printf("입력이 완료되었습니다\n\n");
-
+	all_sung(man, hms);
 }
 
 void input_info(Student* man, int hms) {
@@ -132,7 +134,7 @@ void input_info(Student* man, int hms) {
 
 		printf("국어, 영어, 수학성적을 입력해주세요 ");
 		for (int j = 0; j < 3; j++) {
-			scanf("%d", &man[i].sungjuck[j]);//2명 이상일경우 넘어가지않는다
+			scanf("%d", &man[i].sungjuck[j]);
 		}
 		
 		for (int j = 0; j < 3; j++) {
@@ -171,14 +173,14 @@ void all_sung(Student* man, int hms) {
 		for (int j = 0; j < hms;) {
 			
 
-			if (man[i].sungjuck[3] > man[j].sungjuck[3]) {
+			if (man[i].all_sung > man[j].all_sung) {
 				j++;
 			}
-			else if (man[i].sungjuck[3] < man[j].sungjuck[3]) {
+			else if (man[i].all_sung < man[j].all_sung) {
 				rank++;
 				j++;
 			}
-			else if (man[i].sungjuck[3] == man[j].sungjuck[3]) {
+			else if (man[i].all_sung == man[j].all_sung) {
 				j++;
 				if (i > j) {
 					rank++;
