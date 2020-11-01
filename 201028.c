@@ -5,10 +5,14 @@
 #include <time.h>
 
 
+void StartGame(void);//게임의 몸통이 되는 함수
 int choiceLevel(void); //게임의 레벨을 입력받아 정할 수 있도록 하는 함수
 char* makeAnswer(int len); //게임의 렌덤 정답 값을 만들어내는 함수
-void StartGame(void);//게임의 몸통이 되는 함수
-checkInput(char* user, int len);//입력받는 값을 체크해준다
+char* userInput(int len, int *cnt) { //유저가 숫자를 입력하게 한다
+int checkInput(char* user, int len);//입력받는 값을 체크해준다
+void compareAnswer(char *Ans, char *inpans, int len);//유저에게 입력받은 숫자와 게임의 정답 비교
+
+
 
 int main(int argc, char ** argv) 
 {
@@ -18,6 +22,7 @@ int main(int argc, char ** argv)
 
 void StartGame(void) {//게임의 몸통이 되는 함수
 	int len = 0;
+	int cnt = 0;
 	char* gameAnswer;
 	char* inputAnswer;
 
@@ -25,8 +30,9 @@ void StartGame(void) {//게임의 몸통이 되는 함수
 
 	len = choiceLevel();
 	gameAnswer = makeAnswer(len);
-	inputAnswer = userInput(len);
-	compareAnswer(gameAnswer, inputAnswe);
+	inputAnswer = userInput(len, &cnt);
+
+	compareAnswer(gameAnswer, inputAnswer, len);
 }
 
 int choiceLevel(void) { //게임의 레벨을 입력받아 정할 수 있도록 하는 함수
@@ -73,10 +79,10 @@ char* makeAnswer(int len) { //게임의 렌덤 정답 값을 만들어내는 함
 		
 	}
 
-	return Answer; //힙영역의 메모리의 주소값을 리턴한다.
+	return Answer; //힙영역의 메모리의 주소값을 리턴한다
 }
 
-char* userInput(int len) { //유저가 숫자를 입력하게 한다.
+char* userInput(int len, int *cnt) { //유저가 숫자를 입력하게 한다
 		int check = 0;
 
 		char* userAnswer = (char*)malloc(sizeof(char)*len);
@@ -85,10 +91,12 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 		while(1){
 			printf("숫자 %d개를 입력해주세요", len);
 			scanf("%s", userAnswer);
+			cnt++;
 			check = checkInput(userAnswer, len);
 			
-			if(check == -1){//입력받은 값이 첫번째자리가 0이거나 겹치는 숫자가 있으면 -1을 리턴한다.
+			if(check == -1){//입력받은 값이 첫번째자리가 0이거나 겹치는 숫자가 있으면 -1을 리턴한다
 				memset(userAnswer,0,sizeof(char)*len);
+				cnt--;
 				continue;// -1이라면 다시 값을 받도록한다
 			}
 			else{
@@ -125,7 +133,7 @@ int checkInput(char* user, int len){//입력받는 값을 체크해준다
 	return returnNum;
 }
 
-void compareAnswer(char *Ans, char *inpans, int len){//유저에게 입력받은 숫자와 게임의 정답 비교}]
+void compareAnswer(char *Ans, char *inpans, int len){//유저에게 입력받은 숫자와 게임의 정답 비교
 	int strike = 0;
 	int ball = 0;
 
