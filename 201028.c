@@ -8,6 +8,7 @@
 int choiceLevel(void); //게임의 레벨을 입력받아 정할 수 있도록 하는 함수
 char* makeAnswer(int len); //게임의 렌덤 정답 값을 만들어내는 함수
 void StartGame(void);//게임의 몸통이 되는 함수
+checkInput(char* user, int len);//입력받는 값을 체크해준다
 
 int main(int argc, char ** argv) 
 {
@@ -25,6 +26,7 @@ void StartGame(void) {//게임의 몸통이 되는 함수
 	len = choiceLevel();
 	gameAnswer = makeAnswer(len);
 	inputAnswer = userInput(len);
+	compareAnswer(gameAnswer, inputAnswe);
 }
 
 int choiceLevel(void) { //게임의 레벨을 입력받아 정할 수 있도록 하는 함수
@@ -83,7 +85,7 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 		while(1){
 			printf("숫자 %d개를 입력해주세요", len);
 			scanf("%s", userAnswer);
-			check = answerCheck(userAnswer, len);
+			check = checkInput(userAnswer, len);
 			
 			if(check == -1){//입력받은 값이 첫번째자리가 0이거나 겹치는 숫자가 있으면 -1을 리턴한다.
 				memset(userAnswer,0,sizeof(char)*len);
@@ -96,7 +98,7 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 		return userAnswer;
 }
 
-int answerCheck(char* user, int len){//입력받는 값을 체크해준다
+checkInput(char* user, int len){//입력받는 값을 체크해준다
 	int returnNum = 0;
 
 	for(int i = 0; i < len; i ++){
@@ -122,3 +124,27 @@ int answerCheck(char* user, int len){//입력받는 값을 체크해준다
 	}
 	return returnNum;
 }
+
+void compareAnswer(char *Ans, char *inpans, int len){//유저에게 입력받은 숫자와 게임의 정답 비교
+	int strike = 0;
+	int ball = 0;
+
+	for(int i = 0; i < len; i++){
+		for(int j = 0; j < len; j ++){
+			if(Ans[i] == inpans[j]){
+				if(i == j){
+					strike ++;
+				}
+				else{
+					ball++;
+				}
+			}
+		}
+	}
+	if(strike == len){
+		puts("%10d strike", strike);
+		puts("==========CLEAR!=========");
+	}
+
+	printf("[%s] '%d'strike / '%d'ball", Ans, strike, ball);
+}	
