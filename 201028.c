@@ -28,12 +28,16 @@ void StartGame(void) {//게임의 몸통이 되는 함수
 	inputAnswer = userInput(len);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	compareAnswer(gameAnswer, inputAnswe);
 =======
 >>>>>>> 7d99444... '1030'
 =======
 	compareAnswer(gameAnswer, inputAnswe);
 >>>>>>> dcbb79d... 're load'
+=======
+	compareAnswer(gameAnswer, inputAnswe);
+>>>>>>> 2eb3699119cf9919eb179885e7a5af42a5b0ae43
 }
 
 int choiceLevel(void) { //게임의 레벨을 입력받아 정할 수 있도록 하는 함수
@@ -94,6 +98,7 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 			scanf("%s", userAnswer);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			check = checkInput(userAnswer, len);
 =======
 			check = answerCheck(userAnswer, len);
@@ -101,6 +106,9 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 =======
 			check = checkInput(userAnswer, len);
 >>>>>>> dcbb79d... 're load'
+=======
+			check = checkInput(userAnswer, len);
+>>>>>>> 2eb3699119cf9919eb179885e7a5af42a5b0ae43
 			
 			if(check == -1){//입력받은 값이 첫번째자리가 0이거나 겹치는 숫자가 있으면 -1을 리턴한다.
 				memset(userAnswer,0,sizeof(char)*len);
@@ -115,6 +123,7 @@ char* userInput(int len) { //유저가 숫자를 입력하게 한다.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 checkInput(char* user, int len){//입력받는 값을 체크해준다
 =======
 int answerCheck(char* user, int len){//입력받는 값을 체크해준다
@@ -122,6 +131,9 @@ int answerCheck(char* user, int len){//입력받는 값을 체크해준다
 =======
 checkInput(char* user, int len){//입력받는 값을 체크해준다
 >>>>>>> dcbb79d... 're load'
+=======
+checkInput(char* user, int len){//입력받는 값을 체크해준다
+>>>>>>> 2eb3699119cf9919eb179885e7a5af42a5b0ae43
 	int returnNum = 0;
 
 	for(int i = 0; i < len; i ++){
@@ -149,8 +161,11 @@ checkInput(char* user, int len){//입력받는 값을 체크해준다
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dcbb79d... 're load'
+=======
+>>>>>>> 2eb3699119cf9919eb179885e7a5af42a5b0ae43
 
 void compareAnswer(char *Ans, char *inpans, int len){//유저에게 입력받은 숫자와 게임의 정답 비교
 	int strike = 0;
@@ -176,7 +191,10 @@ void compareAnswer(char *Ans, char *inpans, int len){//유저에게 입력받은
 	printf("[%s] '%d'strike / '%d'ball", Ans, strike, ball);
 }	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7d99444... '1030'
 =======
 >>>>>>> dcbb79d... 're load'
+=======
+>>>>>>> 2eb3699119cf9919eb179885e7a5af42a5b0ae43
