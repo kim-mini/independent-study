@@ -1,0 +1,18 @@
+import cv2
+import os
+from matplotlib import pyplot as pit
+
+
+imageFile = './OpenCV_Python/data/lena.jpg'
+if os.path.isfile(imageFile):
+    pass
+else :
+    print("'{}' not found this path".format(imageFile))// 해당경로가 맞지 않는다면 찾지 못했다는 문구를 출력해준다
+
+
+imgBGR = cv2.imread(imageFile)
+#pit.axis('off')
+imgRGB = cv2.cvtColor(imgBGR,cv2.COLOR_BGR2RGB)
+
+pit.imshow(imgBGR)
+pit.show()
