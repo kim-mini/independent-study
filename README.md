@@ -3,10 +3,10 @@
 
 
 > [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
-- sum divisor
-- 10 -> 3 -> combine digit
-- student
-- baseball game
+> [sum divisor](https://github.com/kim-mini/independent-study#sum divisor)
+> [10 -> 3 -> combine digit](https://github.com/kim-mini/independent-study#10 -> 3 -> combine digit)
+> [student](https://github.com/kim-mini/independent-study#student)
+> [baseball game](https://github.com/kim-mini/independent-study#baseball game)
 
 
 
