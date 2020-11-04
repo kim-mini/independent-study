@@ -17,6 +17,7 @@
 > [baseball game](https://github.com/kim-mini/independent-study/blob/main/README.md#baseball-game)
 
 
+> [error message](https://github.com/kim-mini/independent-study/blob/main/README.md#arror-message)
 
 ---
 
@@ -85,5 +86,15 @@ ex)
 
 ## baseball game
 [야구게임](https://github.com/kim-mini/independent-study/blob/main/source_code/baseball_game.c)
+
+---
+
+## error message
+
+[에러메세지](https://github.com/kim-mini/independent-study/blob/main/source_code/error_massage)
+
+ex)
+
+![ex)error-message](https://postfiles.pstatic.net/MjAyMDExMDRfNDkg/MDAxNjA0NDc3OTA0MzA0.lWEIew4jw7YhXU9XH4GG_qF05vVRzvkPA4l7EDHEDR8g.XUxETq2blt014v1qq-nr_OxiO2ms33d528umZ3oc41Mg.PNG.kimmin2_/image.png?type=w966 "예시입니다")
 
 ---
