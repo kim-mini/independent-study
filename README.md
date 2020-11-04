@@ -2,13 +2,12 @@
 ---
 
 ```
-- [combine digit][1]
+> [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
 - sum divisor
 - 10 -> 3 -> combine digit
 - student
 - baseball game
 
-[1]:(https://github.com/kim-mini/independent-study#combine-digit)
 ```
 
 ---
