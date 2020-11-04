@@ -12,7 +12,7 @@
 ---
 
 ## combine digit 
-[입력받은 자릿수들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/combine%20digit)
+[입력받은 자릿수들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/combine_digit.c)
 
 
 입력받은 자릿수들의 합을 구해보자
@@ -28,7 +28,7 @@ ex)
 
 ## sum divisor
 
-[약수들의 합 구하기](https://github.com/kim-mini/independent-study/blob/main/201013.c)
+[약수들의 합 구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/201013.c)
 
 입력 받은 숫자의 약수를 구해서 약수들의 합 구하기
 
@@ -43,7 +43,7 @@ ex)
 
 ## 10 -> 3 -> combine digit
 
-[10진수를 3진수로 변환하고 3진수의 숫자들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/201013-1.c)
+[10진수를 3진수로 변환하고 3진수의 숫자들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/201013-1.c)
 
 ex)
   ```
@@ -55,7 +55,7 @@ ex)
 ---
 
 ## student
-[성적저장소](https://github.com/kim-mini/independent-study/blob/main/201013-2.c)
+[성적저장소](https://github.com/kim-mini/independent-study/blob/main/source_code/201013-2.c)
 
 ex)
   ```
@@ -75,6 +75,6 @@ ex)
 ---
 
 ## baseball game
-[야구게임](https://github.com/kim-mini/independent-study/blob/main/baseball_game)
+[야구게임](https://github.com/kim-mini/independent-study/blob/main/source_code/baseball_game.c)
 
 ---
