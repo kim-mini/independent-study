@@ -19,6 +19,9 @@
 
 > [error message](https://github.com/kim-mini/independent-study/blob/main/README.md#arror-message)
 
+
+> [image effect](https://github.com/kim-mini/independent-study/blob/main/README.md#image-effect)
+
 ---
 
 ## combine digit 
@@ -95,6 +98,15 @@ ex)
 
 ex)
 
-![ex)error-message](https://postfiles.pstatic.net/MjAyMDExMDRfNDkg/MDAxNjA0NDc3OTA0MzA0.lWEIew4jw7YhXU9XH4GG_qF05vVRzvkPA4l7EDHEDR8g.XUxETq2blt014v1qq-nr_OxiO2ms33d528umZ3oc41Mg.PNG.kimmin2_/image.png?type=w966 "예시입니다")
+![ex)error-message](https://postfiles.pstatic.net/MjAyMDExMDRfNDkg/MDAxNjA0NDc3OTA0MzA0.lWEIew4jw7YhXU9XH4GG_qF05vVRzvkPA4l7EDHEDR8g.XUxETq2blt014v1qq-nr_OxiO2ms33d528umZ3oc41Mg.PNG.kimmin2_/image.png?type=w966 "errormessage project example")
 
 ---
+
+## image effect
+
+[사진효과](https://github.com/kim-mini/independent-study/blob/main/source_code/image_change.py)
+
+ex)
+
+
+![ex)image effect](https://postfiles.pstatic.net/MjAyMDExMDVfMTIx/MDAxNjA0NTcwODY5NTAw.92e9hNQ-cv0BTISn8GOo1vv5F-TobukHRoi-YrGsqxQg.4MDISNefkEiEjtQkvbLoUe3PuNf52tXjiSdYbAilDZcg.PNG.kimmin2_/image.png?type=w966 "image effect project example")
