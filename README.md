@@ -106,6 +106,9 @@ ex)
 
 [사진효과](https://github.com/kim-mini/independent-study/blob/main/source_code/image_change.py)
 
+사진에 회전, 블러, 크롭, 리사이즈 효과를 선택하여 적용해줍니다
+중복적용도 가능합니다
+
 ex)
 
 
