@@ -22,6 +22,8 @@
 
 > [image effect](https://github.com/kim-mini/independent-study/blob/main/README.md#image-effect)
 
+
+> [make ractangle masure lenth](https://github.com/kim-mini/independent-study/blob/main/README.md#make-ractangle-masure-lenth)
 ---
 
 ## combine digit 
@@ -113,3 +115,14 @@ ex)
 
 
 ![ex)image effect](https://postfiles.pstatic.net/MjAyMDExMDVfMTIx/MDAxNjA0NTcwODY5NTAw.92e9hNQ-cv0BTISn8GOo1vv5F-TobukHRoi-YrGsqxQg.4MDISNefkEiEjtQkvbLoUe3PuNf52tXjiSdYbAilDZcg.PNG.kimmin2_/image.png?type=w966 "image effect project example")
+
+---
+
+## make ractangle masure lenth
+
+[네모를 만들어서 네모의 가로세로 길이를 구해보자](https://github.com/kim-mini/independent-study/blob/main/source_code/make_rac.py)
+
+네모를 만들면 그 가로세로 길이를 측정해준다
+ex)
+
+![ex)make ractangle masure lenth](https://postfiles.pstatic.net/MjAyMDExMDZfMjQw/MDAxNjA0NjQxNzQ3MjA5.PT_0Srsg6vqyeyzIUtZRDeR1Es9FjibhybHGbVskTO0g.4F2crSaGKBtoqQfyKBE0mjl8ZNVwdo0fiKVC0NQe6rgg.PNG.kimmin2_/image.png?type=w966 "make ractangle masure lenth project example")
