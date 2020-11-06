@@ -123,6 +123,7 @@ ex)
 [네모를 만들어서 네모의 가로세로 길이를 구해보자](https://github.com/kim-mini/independent-study/blob/main/source_code/make_rac.py)
 
 네모를 만들면 그 가로세로 길이를 측정해준다
+
 ex)
 
 ![ex)make ractangle masure lenth](https://postfiles.pstatic.net/MjAyMDExMDZfMjQw/MDAxNjA0NjQxNzQ3MjA5.PT_0Srsg6vqyeyzIUtZRDeR1Es9FjibhybHGbVskTO0g.4F2crSaGKBtoqQfyKBE0mjl8ZNVwdo0fiKVC0NQe6rgg.PNG.kimmin2_/image.png?type=w966 "make ractangle masure lenth project example")
