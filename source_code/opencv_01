@@ -1,0 +1,15 @@
+import cv2
+import os
+
+path = "./source/data/lena.jpg"
+if os.path.isfile(path):
+    img = cv2.imread(path)#color
+    img2 = cv2.imread(path,0)#gray
+else:
+    print("not found this path : {}".format(path))
+
+cv2.imshow('img_color', img) #output
+cv2.imshow('img_gray', img2) #putput2
+
+cv2.waitKey()
+cv2.destroyAllWindows()
