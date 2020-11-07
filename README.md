@@ -17,7 +17,7 @@
 > [baseball game](https://github.com/kim-mini/independent-study/blob/main/README.md#baseball-game)
 
 
-> [openCV](https://github.com/kim-mini/independent-study/blob/main/README.md#openCV)
+> [openCV](https://github.com/kim-mini/independent-study/blob/main/README.md#opencv)
 
 ---
 
