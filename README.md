@@ -17,13 +17,8 @@
 > [baseball game](https://github.com/kim-mini/independent-study/blob/main/README.md#baseball-game)
 
 
-> [error message](https://github.com/kim-mini/independent-study/blob/main/README.md#arror-message)
+> [openCV](https://github.com/kim-mini/independent-study/blob/main/README.md#openCV)
 
-
-> [image effect](https://github.com/kim-mini/independent-study/blob/main/README.md#image-effect)
-
-
-> [make ractangle masure lenth](https://github.com/kim-mini/independent-study/blob/main/README.md#make-ractangle-masure-lenth)
 ---
 
 ## combine digit 
@@ -93,6 +88,11 @@ ex)
 [야구게임](https://github.com/kim-mini/independent-study/blob/main/source_code/baseball_game.c)
 
 ---
+
+# openCV
+
+## opencv_01
+[opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
 
 ## error message
 
