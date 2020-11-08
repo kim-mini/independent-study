@@ -1,23 +1,17 @@
-# 잔디를 잘 심어보자 
----
+> # 잔디를 잘 심어보자
+<details>
+    <summary>source code list</summary>
+    <div markdown="1">
 
-
-> [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
-
-
-> [sum divisor](https://github.com/kim-mini/independent-study/blob/main/README.md#sum-divisor)
-
-
-> [10 -> 3 -> combine digit](https://github.com/kim-mini/independent-study/blob/main/README.md#10---3---combine-digit)
-
-
-> [student](https://github.com/kim-mini/independent-study#student)
-
-
-> [baseball game](https://github.com/kim-mini/independent-study/blob/main/README.md#baseball-game)
-
-
-> [openCV](https://github.com/kim-mini/independent-study/blob/main/README.md#opencv)
+- [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
+- [sum divisor](https://github.com/kim-mini/independent-study/blob/main/README.md#sum-divisor)
+- [10 -> 3 -> combine digit](https://github.com/kim-mini/independent-study/blob/main/README.md#10---3---combine-digit)
+- [student](https://github.com/kim-mini/independent-study#student)
+- [baseball game](https://github.com/kim-mini/independent-study/blob/main/README.md#baseball-game)
+- [openCV](https://github.com/kim-mini/independent-study/blob/main/README.md#opencv)
+   
+    </div>
+</details>
 
 ---
 
@@ -89,51 +83,28 @@ ex)
 
 ---
 
-# openCV
+> # openCV
+<details>
+    <summary>source code list</summary>
+    <div markdown="1">
 
-## opencv_01
+- [opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
+- [rotate](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_rotate.py)
+- [binary](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_binary.py)
+- [binary + blur](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_binary%2Bblur.py)
+- [bitwise](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_bitwise.py)
+- [crop](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_crop.py)
+- [cvtCOLOR](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_cvtCOLOR.py)
+- [edge](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_edge.py)
+- [flip](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_flip.py)
+- [hsv](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_hsv.py)
+- [image pyramid](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_image_pyramid.py)
+- [inrange](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_inrange.py)
+- [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
 
+    </div>
+</details>
 
-> [opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
-
-
-> [rotate](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_rotate.py)
-
-
-> [binary](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_binary.py)
-
-
-> [binary + blur](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_binary%2Bblur.py)
-
-
-> [bitwise](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_bitwise.py)
-
-
-> [crop](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_crop.py)
-
-
-> [cvtCOLOR](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_cvtCOLOR.py)
-
-
-> [edge](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_edge.py)
-
-
-> [flip](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_flip.py)
-
-
-> [hsv](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_hsv.py)
-
-
-> [image pyramid](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_image_pyramid.py)
-
-
-> [inrange](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_inrange.py)
-
-
-> [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
-
-
----
 
 
 ## error message
