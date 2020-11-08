@@ -1,6 +1,6 @@
-> # 잔디를 잘 심어보자
+# 잔디를 잘 심어보자
 <details>
-    <summary>source code list</summary>
+    <summary>Shortcuts</summary>
     <div markdown="1">
 
 - [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
@@ -13,7 +13,7 @@
     </div>
 </details>
 
----
+
 
 ## combine digit 
 [입력받은 자릿수들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/combine_digit.c)
@@ -83,7 +83,7 @@ ex)
 
 ---
 
-> # openCV
+# openCV
 <details>
     <summary>source code list</summary>
     <div markdown="1">
