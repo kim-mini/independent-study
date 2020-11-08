@@ -3,11 +3,7 @@
 
 
 > [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
-
-
 > [sum divisor](https://github.com/kim-mini/independent-study/blob/main/README.md#sum-divisor)
-
-
 > [10 -> 3 -> combine digit](https://github.com/kim-mini/independent-study/blob/main/README.md#10---3---combine-digit)
 
 
