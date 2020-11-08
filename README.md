@@ -92,7 +92,7 @@ ex)
 # openCV
 
 ## opencv_01
-[opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
+> [opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
 
 ## error message
 
