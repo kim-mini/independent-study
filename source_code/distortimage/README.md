@@ -33,4 +33,6 @@ by 'raspberryPi cam'
 
 and i have to undo the distortion for getting useful data
 
+[this](https://github.com/kim-mini/independent-study/blob/main/source_code/distortimage/ex_1109.py) is test code
+
 ![before / after](https://postfiles.pstatic.net/MjAyMDExMDlfMjY0/MDAxNjA0OTEzMzMxNTQy.aIO-QScv1J2p9SH9ebfif40p_qNVTujE1pVpj2Q_X60g.QXILS2sQrPVvgeV3kJwVG200E4x1r6-CD6bONbAgfXIg.PNG.kimmin2_/image.png?type=w966)
