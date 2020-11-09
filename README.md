@@ -1,6 +1,6 @@
 # 잔디를 잘 심어보자
 <details>
-    <summary>Shortcuts</summary>
+    <summary>Shortcuts -------------------------------------------- < click</summary>
     <div markdown="1">
 
 - [combine digit](https://github.com/kim-mini/independent-study#combine-digit)
@@ -85,7 +85,7 @@ ex)
 
 # openCV
 <details>
-    <summary>source code list</summary>
+    <summary>source code list -------------------------------------------- < click</summary>
     <div markdown="1">
 
 - [opencv-01](https://github.com/kim-mini/independent-study/blob/main/source_code/opencv_01)
