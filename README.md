@@ -101,7 +101,7 @@ ex)
 - [image pyramid](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_image_pyramid.py)
 - [inrange](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_inrange.py)
 - [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
-- [distort image](https://github.com/kim-mini/independent-study#distort image)
+- [distort image](https://github.com/kim-mini/independent-study#distort-image)
 
     </div>
 </details>
