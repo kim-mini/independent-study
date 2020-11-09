@@ -1,0 +1,21 @@
+import os
+import cv2
+
+path = '/home/ubuntu/PycharmProjects/opencv/OpenCV_Python/img/sample/'
+newpath = '/home/ubuntu/PycharmProjects/opencv/OpenCV_Python/img/sample2/'
+
+fileList = os.listdir(path)
+
+cnt = 0
+
+for filename in fileList:
+    dst_path = os.path.join(path,filename)
+    
+    img = cv2.imread(dst_path)
+    dst = cv2.resize(img,dsize=(0,0),fx=0.5,fy=0.5)
+    
+    newfilename = 'chess_{}'.format(cnt)+'.jpg'
+    
+    newfilepath = os.path.join(newpath,newfilename)
+    cv2.imwrite(newfilepath, dst)
+    cnt += 1
