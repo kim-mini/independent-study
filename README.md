@@ -101,6 +101,7 @@ ex)
 - [image pyramid](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_image_pyramid.py)
 - [inrange](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_inrange.py)
 - [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
+- [distort image](https://github.com/kim-mini/independent-study#distort image)
 
     </div>
 </details>
@@ -140,3 +141,15 @@ ex)
 ex)
 
 ![ex)make ractangle masure lenth](https://postfiles.pstatic.net/MjAyMDExMDZfMjQw/MDAxNjA0NjQxNzQ3MjA5.PT_0Srsg6vqyeyzIUtZRDeR1Es9FjibhybHGbVskTO0g.4F2crSaGKBtoqQfyKBE0mjl8ZNVwdo0fiKVC0NQe6rgg.PNG.kimmin2_/image.png?type=w966 "make ractangle masure lenth project example")
+
+---
+
+## distort image
+
+[distort image](https://github.com/kim-mini/independent-study/tree/main/source_code/distortimage)
+
+카메라의 렌즈에 의한 왜곡을 펴준다
+
+ex)
+
+![before / after](https://postfiles.pstatic.net/MjAyMDExMDlfMjY0/MDAxNjA0OTEzMzMxNTQy.aIO-QScv1J2p9SH9ebfif40p_qNVTujE1pVpj2Q_X60g.QXILS2sQrPVvgeV3kJwVG200E4x1r6-CD6bONbAgfXIg.PNG.kimmin2_/image.png?type=w966)
