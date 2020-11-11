@@ -102,6 +102,7 @@ ex)
 - [inrange](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_inrange.py)
 - [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
 - [distort image](https://github.com/kim-mini/independent-study#distort-image)
+- [image save 10s](https://github.com/kim-mini/independent-study#image-save-10s)
 
     </div>
 </details>
@@ -153,3 +154,11 @@ ex)
 ex)
 
 ![before / after](https://postfiles.pstatic.net/MjAyMDExMDlfMjY0/MDAxNjA0OTEzMzMxNTQy.aIO-QScv1J2p9SH9ebfif40p_qNVTujE1pVpj2Q_X60g.QXILS2sQrPVvgeV3kJwVG200E4x1r6-CD6bONbAgfXIg.PNG.kimmin2_/image.png?type=w966)
+
+---
+## image save 10s
+
+[image save 10s](https://github.com/kim-mini/independent-study/blob/main/source_code/BB_main.py)
+
+영상을 10초로 잘라서 저장해주고 해당 디렉토리의 사용량이 처음보다 10000000만큼 더쓰면 제일 먼저 생성된 파일을 삭제시켜줘서 용량을 유지시켜준다
+
