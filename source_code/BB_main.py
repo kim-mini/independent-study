@@ -11,6 +11,13 @@ from finding_lines import Line, warp_image, find_LR_lines, draw_lane, print_road
 import shutil
 from skimage import exposure
 
+def splitdate(datefile):
+    b = datefile.split('_')
+    c = b[2]
+    date = c.split('.')
+    date = date[0]
+    return date
+
 input_name = 'project_video.mp4' #'test_images/straight_lines1.jpg' # 'challenge_video.mp4'
 
 left_line = Line()
@@ -29,6 +36,7 @@ if not os.path.isdir(outpath):  # 해당경로 디렉토리가 없다면 만들�
     os.mkdir(outpath)
 
 filelist = os.listdir(outpath)
+print('1',filelist)
 
 
 frameRate = 25 #video FPS
@@ -50,7 +58,10 @@ if __name__ == '__main__':
     cap = cv2.VideoCapture(input_name)
 
     while (cap.isOpened()):
-        _, frame = cap.read()
+        ref, frame = cap.read()
+
+        if not ref:
+            break
 
         # Correcting for Distortion
         undist_img = undistort(frame, mtx, dist)
@@ -101,9 +112,6 @@ if __name__ == '__main__':
         info2 = print_road_status(info2, left_line, right_line)
         cv2.imshow('road info', info2)
 
-
-
-
         if not(record) : #record = False
             record += 1
 
@@ -134,11 +142,21 @@ if __name__ == '__main__':
             out2 = cv2.VideoWriter(outname2, fourcc, frameRate, frame_size2, 0)
             record -= 1
 
+            #일정한 사용량을 넘으면 제일 첫번째 있는 파일 삭제
             diskLabel2 = outpath
             _, used2, _ = shutil.disk_usage(diskLabel2)
-            print('2', used2)
+
+            filename = []
+
             if (used + 10000000)>used2:
-                for file in filelist:
+                filelist = os.listdir(outpath)
+
+                x = min(filelist)
+                print(x)
+
+                # a = os.path.join(outpath,x)
+                # os.remove(a)
+
 
 
         #out.write(frame)
@@ -152,6 +170,6 @@ if __name__ == '__main__':
     cap.release()
     cv2.destroyAllWindows()
 
-
+    filelist = os.listdir(outpath)
     print(filelist)
 
