@@ -103,6 +103,7 @@ ex)
 - [resize](https://github.com/kim-mini/independent-study/blob/main/source_code/openCV_resize.py)
 - [distort image](https://github.com/kim-mini/independent-study#distort-image)
 - [image save 10s](https://github.com/kim-mini/independent-study#image-save-10s)
+- [basic video editer](https://github.com/kim-mini/independent-study#basic-video-editer)
 
     </div>
 </details>
@@ -122,10 +123,10 @@ ex)
 ## image effect
 
 [사진효과](https://github.com/kim-mini/independent-study/blob/main/source_code/image_change.py)
-
+```
 사진에 회전, 블러, 크롭, 리사이즈 효과를 선택하여 적용해줍니다
 중복적용도 가능합니다
-
+```
 ex)
 
 
@@ -136,9 +137,9 @@ ex)
 ## make ractangle masure lenth
 
 [네모를 만들어서 네모의 가로세로 길이를 구해보자](https://github.com/kim-mini/independent-study/blob/main/source_code/make_rac.py)
-
+```
 네모를 만들면 그 가로세로 길이를 측정해준다
-
+```
 ex)
 
 ![ex)make ractangle masure lenth](https://postfiles.pstatic.net/MjAyMDExMDZfMjQw/MDAxNjA0NjQxNzQ3MjA5.PT_0Srsg6vqyeyzIUtZRDeR1Es9FjibhybHGbVskTO0g.4F2crSaGKBtoqQfyKBE0mjl8ZNVwdo0fiKVC0NQe6rgg.PNG.kimmin2_/image.png?type=w966 "make ractangle masure lenth project example")
@@ -148,9 +149,9 @@ ex)
 ## distort image
 
 [distort image](https://github.com/kim-mini/independent-study/tree/main/source_code/distortimage)
-
+```
 카메라의 렌즈에 의한 왜곡을 펴준다
-
+```
 ex)
 
 ![before / after](https://postfiles.pstatic.net/MjAyMDExMDlfMjY0/MDAxNjA0OTEzMzMxNTQy.aIO-QScv1J2p9SH9ebfif40p_qNVTujE1pVpj2Q_X60g.QXILS2sQrPVvgeV3kJwVG200E4x1r6-CD6bONbAgfXIg.PNG.kimmin2_/image.png?type=w966)
@@ -160,5 +161,19 @@ ex)
 
 [image save 10s](https://github.com/kim-mini/independent-study/blob/main/source_code/BB_main.py)
 
+```
 영상을 10초로 잘라서 저장해주고 해당 디렉토리의 사용량이 처음보다 10000000만큼 더쓰면 제일 먼저 생성된 파일을 삭제시켜줘서 용량을 유지시켜준다
+```
+
+---
+
+# basic video editer
+
+[basic video editer](https://github.com/kim-mini/independent-study/blob/main/source_code/basic_video_editer/bve.py)
+
+```
+you only need to modify the file path
+
+if you enter the proper file path, the video will play
+```
 
