@@ -41,7 +41,7 @@ let me introduce you it have some funcion
 
 ---
 
-basic video[[basic]video]
+
 
 <img src="https://blogfiles.pstatic.net/MjAyMDExMTFfNDMg/MDAxNjA1MDk2MjQ0NjA2.9jhIiBFkVGJeHbb16s1q_BO-fiOAPNO3dWyV9UcSxiQg.4iDHLWYwJ_-guWEYePqmJsHNQLN0k5brI5NbJQMdLCQg.PNG.kimmin2_/image.png" width="60%">
 
