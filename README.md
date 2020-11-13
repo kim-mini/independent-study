@@ -169,7 +169,7 @@ ex)
 
 # basic video editer
 
-[basic video editer](https://github.com/kim-mini/independent-study/blob/main/source_code/basic_video_editer/bve.py)
+[basic video editer](https://github.com/kim-mini/independent-study/tree/main/source_code/basic_video_editer)
 
 ```
 you only need to modify the file path
