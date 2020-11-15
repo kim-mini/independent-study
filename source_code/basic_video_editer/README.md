@@ -1,5 +1,7 @@
 <img src="https://blogfiles.pstatic.net/MjAyMDExMTNfMjA4/MDAxNjA1MjU2ODM3OTQy.uL9DKBmQuT6AGmxTEBSCl-fyeSPmD6OKipRZqxTwqCsg.lrCwPM82kMAzkTqnvTBlaGEZKueHTdDNofiWQTb_CTYg.GIF.kimmin2_/1D03DF64-489F-45DC-8335-799838E60748.gif" width="60%">
 
+[<img src="https://blogfiles.pstatic.net/MjAyMDExMTVfMjg3/MDAxNjA1NDM1Mzk2MzQ1.RIG0EqSspX6TfvFGkZOeo8beftenYyUwyx9xo_bBuxkg.8jej-Jc4WVgPE1R_gnhTS-bC-bSKZUVnF6tPGqUNY_0g.PNG.kimmin2_/9376BBA7-5A42-4870-933A-1797BDE1B0A8.png?type=w1" width="30%">](https://github.com/kim-mini/independent-study/blob/main/source_code/basic_video_editer/bve.py)
+
 ---
 
 # basic_video_editer
@@ -41,7 +43,6 @@ let me introduce you it have some funcion
 
 ---
 
-basic video[[basic]video]
 
 <img src="https://blogfiles.pstatic.net/MjAyMDExMTFfNDMg/MDAxNjA1MDk2MjQ0NjA2.9jhIiBFkVGJeHbb16s1q_BO-fiOAPNO3dWyV9UcSxiQg.4iDHLWYwJ_-guWEYePqmJsHNQLN0k5brI5NbJQMdLCQg.PNG.kimmin2_/image.png" width="60%">
 
