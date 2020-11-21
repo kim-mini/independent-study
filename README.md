@@ -183,3 +183,6 @@ ex)
 
 ---
 
+# Data science
+
+[pandas](https://github.com/kim-mini/independent-study/tree/main/source_code/pandas)
