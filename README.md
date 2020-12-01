@@ -192,6 +192,6 @@ ex)
 
 # photo works
 
-![[code](https://github.com/kim-mini/independent-study/tree/main/source_code/photoworks)](https://img.shields.io/badge/mini%20works-code-ff69b4)
+[![code](https://img.shields.io/badge/mini%20works-code-ff69b4)](https://github.com/kim-mini/independent-study/tree/main/source_code/photoworks)
 
 <img src="https://camo.githubusercontent.com/48161e23151123253cbdc2087764241da314945711cbb42cba0b4fcdf5046f1f/68747470733a2f2f626c6f6766696c65732e707374617469632e6e65742f4d6a41794d4445784d7a42664d5449772f4d4441784e6a41324e7a49354e546b784d5455772e6e376e4b59334f437458506439775436685072486557703479387031424d4544346a53697171675f344a63672e667a555565626d505a784975614e6f324855496d72472d4d4953514f7535345f4652676572534d57353745672e504e472e6b696d6d696e325f2f696d6167652e706e67" width="30%">
