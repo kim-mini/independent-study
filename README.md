@@ -14,7 +14,6 @@
 </details>
 
 
-
 ## combine digit 
 [입력받은 자릿수들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/combine_digit.c)
 
