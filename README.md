@@ -13,6 +13,15 @@
     </div>
 </details>
 
+---
+
+## For_Me
+[나를 위한 코드 짜기](https://github.com/kim-mini/independent-study/tree/main/source_code/for_me)
+
+업무 중 반복 작업을 피하기 위한 코드 짜기
+
+---
+
 
 ## combine digit 
 [입력받은 자릿수들의 합구하기](https://github.com/kim-mini/independent-study/blob/main/source_code/combine_digit.c)
